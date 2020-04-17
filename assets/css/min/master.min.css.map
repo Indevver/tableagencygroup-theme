@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "master.min.css",
+	"sources": [
+		"../master.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

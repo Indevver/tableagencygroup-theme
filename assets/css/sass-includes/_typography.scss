@@ -1,0 +1,84 @@
+/* main: ../master.scss */
+/*
+* Typography
+*
+* This file is to be used for all styling specific
+* to site's typographic elements. This includes all
+* h1 - h6 headings, li, p, and such. This file should
+* start with any @font-face declarations.
+*
+*/
+
+@each $elem, $current-spacing in $spacing {
+	@each $h, $margin in $current_spacing {
+		#{$elem} + #{$h} {
+			margin-top: $margin;
+		}
+	}
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+
+}
+
+
+h1,
+.h1 {
+	font-family: $font-secondary;
+	font-size: 4rem;
+	line-height: 1.125;
+	font-weight: 900;
+}
+h2,
+.h2 {
+	font-family: $font-tertiary;
+	font-size: 2.625rem;
+	line-height: 1.125;
+	font-weight: 700;
+}
+h3,
+.h3 {
+	font-family: $font-secondary;
+	font-size: 1.875rem;
+	line-height: 1.25;
+	font-weight: 400;
+	&.display-header,
+	&.display-header__footer {
+		font-size: 5.75rem;
+	}
+}
+
+h4,
+.h4 {
+	font-family: $font-tertiary;
+	font-size: 2rem;
+	line-height: 1;
+	font-weight: 700;
+    letter-spacing: .05rem;
+}
+h5,
+.h5 {
+	font-size: 1.416rem;
+	line-height: 1.979375rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+h6,
+.h6 {
+	font-size: 1.375rem;
+	line-height: 1.318;
+	font-weight: 300;
+	letter-spacing: .1rem;
+}
+blockquote:not(.testimonial-blockquote),
+blockquote:not(.testimonial-blockquote) p {
+	font-size: 1.25rem;
+	line-height: 1.75;
+	font-style: italic;
+	font-weight: 300;
+}

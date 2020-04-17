@@ -1,5 +1,5 @@
 /*************************************
-Include scss files for the build
+Base index of scss files
 **************************************/
 
 @import 'compass/compass';
@@ -9,17 +9,21 @@ Include scss files for the build
 @import 'sass-utilities/functions';
 @import 'sass-utilities/mixins';
 @import 'sass-utilities/extendables';
-// @import 'sass-utilities/normalize';
-@import 'sass-utilities/foundation6flex';
+@import 'sass-utilities/normalize';
+//@import 'sass-utilities/foundation6';
+// @import 'sass-utilities/foundation6flex';
 @import 'sass-includes/globals';
-@import 'sass-includes/backgrounds';
 @import 'sass-includes/forms';
 @import 'sass-includes/typography';
-@import 'sass-includes/banners';
-@import 'sass-includes/header';
-@import 'sass-includes/footer';
+// @import 'sass-includes/header';
+// @import 'sass-includes/footer';
 @import 'sass-includes/templates';
-@import 'sass-includes/animation';
-@import 'sass-includes/keyframes';
-@import 'sass-vendor/swiper';
+// @import 'sass-includes/blocks';
+// @import 'sass-vendor/modaal';
+// @import 'sass-vendor/swiper';
 @import 'sass-vendor/wordpress';
+@import 'sass-vendor/icomoon';
+
+body {
+	margin: 20px !important;
+}

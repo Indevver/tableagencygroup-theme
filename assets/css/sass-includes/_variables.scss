@@ -1,0 +1,177 @@
+/* main: ../master.scss */
+/*
+* Variables
+*
+* This file is to be used for all variables
+* on the site.
+*
+*/
+
+
+/*************************************
+Foundation and Grid Variables
+**************************************/
+$row-max-width-num: 1280;
+$row-max-width: #{$row-max-width-num}px;
+$mobile-gutter-width: .625rem;
+$gutter-width: .9375rem;
+$medium: 741px;
+// $large: 1025px;
+$large: 1199px;
+$xlarge: 1441px;
+$xxlarge: 1921px;
+
+$menu-mobile: 768px;
+$menu-tablet: 1200px;
+
+$content-spacing-large: 10rem;
+$content-spacing: 2vw;
+$content-spacing-tablet: 2vw;
+$content-spacing-mobile: 2vw;
+
+$bg-spacing-mobile: 1rem;
+$bg-spacing: 3rem;
+
+$block-padding-vert: 6.25rem;
+$block-padding-horz: 0;
+$block-padding: $block-padding-vert $block-padding-horz;
+
+$block-padding-mobile-vert: 3.25rem;
+$block-padding-mobile-horz: 0;
+$block-padding-mobile: $block-padding-mobile-vert $block-padding-mobile-horz;
+
+$header-height: 50px;
+$header-height-scrolled: 50px;
+$header-height-tablet: 50px;
+$header-height-mobile: 50px;
+
+$animation-max-width: 980px;
+$animation-logo-dim: 126px;
+
+/*************************************
+Fonts
+- Make sure fallbacks are included
+- e.g. $open-sans : 'Open Sans', Arial, Helvetica, sans-serif;
+**************************************/
+
+// body copy and such
+$font-primary: 'Montserrat', sans-serif;
+
+// headers and/or script
+$font-secondary: 'Helvetica';
+
+$font-tertiary: 'Arial';
+
+/*************************************
+Colors
+**************************************/
+
+$black:          #000000;
+$gray-darkest:   #222222;
+$gray-dark:      #444444;
+$gray-med:       #aaaaaa;
+$gray:           #cccccc;
+$gray-light:     #eeeeee;
+$gray-lightest:  #f1f1f1;
+$white:          #ffffff;
+
+$red:            #ff0000;
+
+
+$text: $gray-dark;
+$text-light: $white;
+
+
+$error-text: $red;
+$transparent: rgba($black, 0);
+
+$bg-colors: (
+    white: $white,
+    black: $black,
+    gray-light: $gray-light,
+    gray-med: $gray-med,
+    gray-dark: $gray-dark,
+    block-bg-none: 'transparent',
+);
+
+$bg-colors-with-light-text: (
+    'image',
+    'video',
+    'gray-med',
+    'gray-dark',
+    'gray-darkest',
+);
+
+$shadow: 0 0 40px rgba($black, .5);
+
+
+$z-index-header: 10;
+
+/*************************************
+Typography Spacing
+**************************************/
+$base_spacing: (
+    blockquote: 1.618rem,
+    ul: 1rem,
+    ol: 1rem,
+    p: 1rem,
+    h1: 3rem,
+    h2: 2.5rem,
+    h3: 2.25rem,
+    h4: 1.75rem,
+    h5: 1.5rem,
+    h6: 1.25rem
+);
+$h1_spacing: (
+    h2: 1.375rem,
+    h3: 1rem,
+    h4: .75rem,
+    h5: .675rem,
+    h6: .5rem,
+    p: .8333rem
+);
+$h2_spacing: (
+    h3: .5rem,
+    h4: .375rem,
+    h5: .25rem,
+    h6: .125rem,
+    p: 1.25rem
+);
+$h3_spacing: (
+    h4: .375rem,
+    h5: .25rem,
+    h6: .125rem,
+    p: 1.25rem
+);
+$h4_spacing: (
+    h5: .25rem,
+    h6: .125rem,
+    p: 1.25rem
+);
+$h5_spacing: (
+    h6: .125rem,
+    p: 1.25rem,
+    ul: .5555rem,
+    ol: .5555rem
+);
+$h6_spacing: (
+    p: .2777rem,
+    ul: .5555rem,
+    ol: .5555rem
+);
+
+// Spacing Map of Maps
+$spacing: (
+    '*': $base_spacing,
+    h1: $h1_spacing,
+    h2: $h2_spacing,
+    h3: $h3_spacing,
+    h4: $h4_spacing,
+    h5: $h5_spacing,
+    h6: $h6_spacing
+);
+
+
+/*************************************
+Animation
+**************************************/

@@ -22,6 +22,25 @@ a[class*="button"]{
 }
 div[class*="button"]{
     * + & {
-        margin-top: 1.25rem;
+        margin-top: 1.5rem;
     }
+}
+
+.push-image-left {
+    @include media-max(var(--go--max-width--alignwide)) {
+        overflow: hidden;
+    }
+    @include media-min($medium) {
+        figure {
+            padding-bottom: 60%;
+        }
+        img {
+            width: 50vw;
+            right: 12.5%;
+            position: absolute;
+            bottom: 0;
+            max-width: 600px;
+        }
+    }
+
 }

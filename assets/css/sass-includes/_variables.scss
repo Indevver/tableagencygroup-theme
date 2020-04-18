@@ -15,7 +15,7 @@ $row-max-width-num: 1280;
 $row-max-width: #{$row-max-width-num}px;
 $mobile-gutter-width: .625rem;
 $gutter-width: .9375rem;
-$medium: 741px;
+$medium: 600px;
 // $large: 1025px;
 $large: 1199px;
 $xlarge: 1441px;
@@ -55,7 +55,8 @@ Fonts
 **************************************/
 
 // body copy and such
-$font-primary: futura-pt, sans-serif;
+$font-primary: 'futura-pt', sans-serif;
+// $font-primary: futura-pt, Gill Sans,Gill Sans MT,Calibri,sans-serif;
 
 // headers and/or script
 $font-secondary: 'Helvetica';
@@ -80,7 +81,10 @@ $red:            #ff0000;
 // Custom Colors
 
 $color-primary: #c76919;
+$color-secondary: #FFF7F3;
 $color-tag-primary: #FF4E50;
+
+$color-border: #E8E9E4;
 
 ////////////////
 

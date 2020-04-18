@@ -7,7 +7,12 @@
 * navigation
 *
 */
-header.page-header.entry-header.m-auto.px {
+#site-header {
+    position: fixed;
+    width: 100%;
+}
+header.page-header.entry-header.m-auto.px,
+#site-header .header__extras {
     display: none;
 }
 

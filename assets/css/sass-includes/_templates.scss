@@ -7,3 +7,19 @@
 * types as well as archive pages.
 *
 */
+.wp-block-cover {
+    &.is-style-bottom-wave {
+        figure {
+            display: inline-block;
+        }
+        img {
+            mask-image: none !important;
+            -webkit-mask-image: none !important;
+        }
+    }
+}
+.content-area {
+    &::first-child {
+        padding-top: 200px;
+    }
+}

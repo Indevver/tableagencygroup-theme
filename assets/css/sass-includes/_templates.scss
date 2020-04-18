@@ -23,3 +23,36 @@
         padding-top: 200px;
     }
 }
+
+.is-style-bottom-wave {
+	mask-image: none !important;
+	-webkit-mask-image: none !important;
+	background-color: $white !important;
+	&::before {
+		opacity: 1 !important;
+		background-image: url('../../images/banner-bg.svg');
+		background-color: transparent !important;
+		height: 90%;
+	    background-size: auto 100%;
+	    background-repeat: no-repeat;
+	    background-position: bottom center;
+	    top: auto !important;
+	}
+    p.hero-text + * {
+        margin-top: .875rem;
+    }
+    * + [class*=button] {
+        margin-top: 1.875rem;
+    }
+    figure {
+        transition: all .3s ease-out .75s;
+        opacity: 0;
+        transform: translate3d(0,30px,0);
+    }
+    &.animated {
+        figure {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+    }
+}

@@ -7,3 +7,21 @@
 * ui/ux elements that aren't part of a form, etc.
 *
 */
+
+a[class*="button"]{
+    transition: $transition;
+    background-color: $color-tag-primary !important;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-size: .9375rem;
+    font-weight: bold;
+    padding: .9375rem 2rem;
+    &:hover {
+        background-color: darken($color-tag-primary, 20) !important;
+    }
+}
+div[class*="button"]{
+    * + & {
+        margin-top: 1.25rem;
+    }
+}

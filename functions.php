@@ -9,6 +9,7 @@ function tag_enqueue_styles() {
     wp_enqueue_style( 'global-styles', get_stylesheet_directory_uri() . '/assets/css/min/master.min.css', [$parent_style], '1.0.1');
     wp_enqueue_style( 'typekit', 'https://use.typekit.net/ena6hfe.css' );
 
+    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/tag-scripts.js', array( 'jquery' ) );
 }
 
 

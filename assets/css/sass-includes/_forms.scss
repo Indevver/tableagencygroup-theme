@@ -1,0 +1,24 @@
+/* main: ../master.scss */
+/*
+* Forms
+*
+* This file is to be used for all styling specific
+* to site's forms. This includes any overwrites of
+* third party forms such as shopity forms, marketo, etc.
+*/
+
+/*************************************
+Inputs
+**************************************/
+
+
+
+/*************************************
+Gravity Forms
+**************************************/
+
+.gform_container {
+	.gform_validation_container {
+		display: none;
+	}
+}

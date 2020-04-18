@@ -1,0 +1,21 @@
+/* main: ../master.scss */
+/*
+ *  Dark Background Colors and Light Text
+ */
+@each $color_name, $color_value in $bg-colors {
+	.bg-#{$color_name},
+	.block-bg-#{$color_name} {
+		background-color: $color_value;
+	}
+}
+
+@each $color_name in $bg-colors-with-light-text {
+	.bg-#{$color_name},
+	.bg-#{$color_name} .block-inner,
+	.block-bg-#{$color_name},
+	.block-bg-#{$color_name} .block-inner {
+		*:not(.button):not(a):not(table) {
+			color: $text-light;
+		}
+	}
+}

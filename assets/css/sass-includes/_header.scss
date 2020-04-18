@@ -1,0 +1,31 @@
+/* main: ../master.scss */
+/*
+* Header
+*
+* This file is to be used for all styling specific
+* to site's header. This includes the menu and
+* navigation
+*
+*/
+header.page-header.entry-header.m-auto.px {
+    display: none;
+}
+
+.align-items-center > div {
+	align-items: center !important;
+}
+
+span.rise-up-logo {
+    background: #ff4e50;
+    padding: 0 0.5rem;
+    transform: skewY(-10deg) translateY(50%);
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: -100%;
+    font-size: 50px;
+		line-height: 1.2;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+	text-transform: uppercase;
+}

@@ -8,7 +8,8 @@
 *
 */
 
-a[class*="button"]{
+a[class*="button"],
+input[type=submit]{
     transition: $transition;
     background-color: $color-tag-primary !important;
     font-family: $font-primary;

@@ -33,17 +33,27 @@ $slides = array_map( function($a) {
 
 <div id="<?= $id ?>" class="<?= $className ?>">
 	<?php foreach($slides as $slide) : ?>
-		<?= $slide['session_title'] ?>
-		<img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
-		<?php if ($slide['panelists']) : ?>
-			<?php foreach($slide['panelists'] as $panelist) : ?>
-				<img src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
-				<a href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
-					<?= $panelist['link_to_bio']['title'] ?? '' ?>
-				</a>
-				<?= $panelist['name'] ?>
-				<?= $panelist['organization'] ?>
-			<?php endforeach ?>
-		<?php endif ?>
+		<h3>
+			<?= $slide['session_title'] ?>
+        </h3>
+        <div class="columns">
+            <div class="col">
+                <img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
+            </div>
+            <div class="col panelists">
+                <?php if ($slide['panelists']) : ?>
+		            <?php foreach($slide['panelists'] as $panelist) : ?>
+                        <a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
+                            <img class="panelist-headshot" src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
+	                        <div class="panelist-name">
+		                        <?= $panelist['name'] ?>
+                            </div>
+                            <div class="panelist-organization">
+	                            <?= $panelist['organization'] ?>
+                            </div>
+                        </a>
+		            <?php endforeach ?>
+	            <?php endif ?></div>
+            </div>
 	<?php endforeach ?>
 </div>

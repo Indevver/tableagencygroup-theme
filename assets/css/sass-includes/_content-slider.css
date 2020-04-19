@@ -1,0 +1,10 @@
+.columns {
+  display: flex; }
+  .columns .col {
+    flex: 1; }
+  .columns .col.panelists {
+    display: flex; }
+    .columns .col.panelists .headshot {
+      border-radius: 50%; }
+
+/*# sourceMappingURL=content-slider.css.map */

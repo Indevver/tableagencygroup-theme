@@ -5,15 +5,17 @@ include('acf-gutenblocks.php');
 add_action( 'wp_enqueue_scripts', 'tag_enqueue_styles' );
 function tag_enqueue_styles() {
 
+    $version = '1.0.3';
+
     $parent_style = 'parent-style';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [$parent_style], wp_get_theme()->get('Version'));
-    wp_enqueue_style( 'global-styles', get_stylesheet_directory_uri() . '/assets/css/min/master.min.css', [$parent_style], '1.0.1');
+    wp_enqueue_style( 'global-styles', get_stylesheet_directory_uri() . '/assets/css/min/master.min.css', [$parent_style], $version);
     // wp_enqueue_style( 'typekit', 'https://use.typekit.net/ena6hfe.css' ); // Jeremy's
     wp_enqueue_style( 'typekit', 'https://use.typekit.net/eqz5ubu.css' ); // Brian's
 
-    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/tag-scripts.js', array( 'jquery' ) );
+    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/tag-scripts.js', array( 'jquery' ), $version );
 }
 
 

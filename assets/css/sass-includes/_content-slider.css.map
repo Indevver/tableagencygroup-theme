@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI;EAEb,aAAK;IACH,IAAI,EAAE,CAAC;EAGT,uBAAe;IACb,OAAO,EAAE,IAAI;IAEb,iCAAU;MACR,aAAa,EAAE,GAAG",
+"sources": ["content-slider.scss"],
+"names": [],
+"file": "content-slider.css"
+}

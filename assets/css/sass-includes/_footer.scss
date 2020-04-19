@@ -6,3 +6,36 @@
 * to site's footer.
 *
 */
+#colophon.site-footer {
+    background-image: url('../../images/footer-bg.svg');
+    padding: 3.5rem 0 2rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    .site-footer__inner {
+        padding: 0;
+    }
+    .site-footer__row {
+        padding: 0;
+        margin-top: 0;
+        border: 0;
+        .site-info {
+            font-family: $font-primary;
+            font-size: .875rem;
+            font-weight: 500;
+            line-height: 1.675;
+            margin-top: 1rem;
+        }
+        .social-icons {
+            svg {
+                height: 24px;
+            }
+        }
+    }
+    .custom-logo-link {
+        max-width: 150px;
+        img {
+            max-width: 100%;
+        }
+    }
+}

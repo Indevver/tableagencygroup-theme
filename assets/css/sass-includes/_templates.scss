@@ -45,7 +45,7 @@
         margin-top: 1.875rem;
     }
     figure {
-        transition: all .75s ease-out .75s;
+        transition: all 1.25s ease-out 1s;
         opacity: 0;
         transform: translate3d(0,40px,0);
     }
@@ -95,4 +95,21 @@
             padding: 2rem 2rem;
         }
     }
+}
+
+.wp-block-coblocks-row.tag-cta {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 85vw;
+    position: relative;
+    left: calc(50% - 42.5vw);
+    .wp-block-coblocks-row__inner {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+
+
+.tag-gallery .wp-block-coblocks-gallery-offset.alignwide {
+    max-width: 1240px !important;
 }

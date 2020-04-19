@@ -5,7 +5,7 @@ include('acf-gutenblocks.php');
 add_action( 'wp_enqueue_scripts', 'tag_enqueue_styles' );
 function tag_enqueue_styles() {
 
-    $version = '1.0.3';
+    $version = '1.0.5';
 
     $parent_style = 'parent-style';
 

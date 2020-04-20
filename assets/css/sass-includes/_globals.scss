@@ -28,10 +28,13 @@ div[class*="button"]{
     }
 }
 
-#site-content .content-area > :first-child {
+#site-content .content-area {
     padding-top: 60px;
     @include media-min($medium) {
         padding-top: 98px;
+    }
+    > :first-child {
+        margin-top: 0 !important;
     }
 }
 

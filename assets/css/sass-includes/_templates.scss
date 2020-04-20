@@ -18,11 +18,6 @@
         }
     }
 }
-.content-area {
-    &::first-child {
-        padding-top: 200px;
-    }
-}
 
 .wp-block-cover.tag-banner-wave {
 	mask-image: none !important;
@@ -38,6 +33,9 @@
 	    background-position: bottom center;
 	    top: auto !important;
 	}
+    .wp-block-cover__inner-container {
+        padding-top: 1rem;
+    }
     p.hero-text + * {
         margin-top: .875rem;
     }

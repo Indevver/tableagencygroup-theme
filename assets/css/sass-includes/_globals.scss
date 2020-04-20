@@ -12,11 +12,12 @@ a[class*="button"],
 input[type=submit]{
     transition: $transition;
     background-color: $color-tag-primary !important;
-    font-family: $font-primary;
-    text-transform: uppercase;
-    font-size: .9375rem;
-    font-weight: bold;
-    padding: .9375rem 2rem;
+    font-family: $font-primary !important;
+    text-transform: uppercase !important;
+    font-size: .9375rem !important;
+    font-weight: bold !important;
+    padding: .9375rem 2rem !important;
+    border-radius: 2px !important;
     &:hover {
         background-color: darken($color-tag-primary, 20) !important;
     }
@@ -24,6 +25,13 @@ input[type=submit]{
 div[class*="button"]{
     * + & {
         margin-top: 1.5rem;
+    }
+}
+
+#site-content .content-area > :first-child {
+    padding-top: 60px;
+    @include media-min($medium) {
+        padding-top: 98px;
     }
 }
 
@@ -54,4 +62,8 @@ div[class*="button"]{
             margin: 1rem 1.5rem;
         }
     }
+}
+
+.align-self-center {
+    align-self: center;
 }

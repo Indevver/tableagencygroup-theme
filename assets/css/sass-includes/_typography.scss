@@ -59,6 +59,7 @@ p {
 		font-size: 2rem;
 		line-height: 1.25;
 		font-weight: 700;
+		margin-bottom: 1rem;
 	}
 
 	h4,
@@ -67,6 +68,7 @@ p {
 		font-size: 1.5rem;
 		line-height: 1;
 		font-weight: 700;
+		margin-bottom: .75rem;
 	}
 	h5,
 	.h5 {
@@ -106,7 +108,7 @@ p {
 			width: 100vw;
 			position: absolute;
 			left: calc(100% + 20px);
-			top: -5px;
+			top: -4px;
 			margin: auto;
 			bottom: 0;
 		}

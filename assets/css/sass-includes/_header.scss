@@ -11,8 +11,12 @@
     position: fixed;
     width: 100%;
     .header__inner {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        @include media-min($medium) {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
     }
 }
 header.page-header.entry-header.m-auto.px,
@@ -49,6 +53,23 @@ span.rise-up-logo {
                 text-decoration: none !important;
                 color: $color-tag-primary;
                 border-color: transparent;
+            }
+        }
+    }
+    .menu-cta {
+        text-transform: uppercase;
+        a {
+            color: $color-tag-primary;
+            &:hover {
+                color: darken($color-tag-primary, 10);
+            }
+        }
+
+    }
+    .menu-is-open & {
+        a {
+            @include media-max($large) {
+                font-size: 1.5rem !important;
             }
         }
     }

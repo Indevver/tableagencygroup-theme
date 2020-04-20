@@ -38,4 +38,15 @@
             max-width: 100%;
         }
     }
+    @include media-max($large) {
+        padding: 4.5rem 0 2rem;
+        background-size: cover;
+        .custom-logo-link {
+            display: block;
+            margin: auto;
+        }
+        .header__titles {
+            margin-bottom: 1rem;
+        }
+    }
 }

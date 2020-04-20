@@ -105,6 +105,32 @@
 }
 
 
-.tag-gallery .wp-block-coblocks-gallery-offset.alignwide {
-    max-width: 1240px !important;
+.tag-gallery {
+    &.wp-block-coblocks-row {
+        padding-top: 2rem;
+    }
+    .wp-block-coblocks-gallery-offset.alignwide {
+        max-width: 1240px !important;
+    }
+}
+
+.panelist-row {
+    + .panelist-row {
+        margin-top: 3rem;
+        @include media-min($large) {
+            margin-top: 4rem;
+        }
+    }
+}
+
+.wp-block-coblocks-row {
+    + h3 {
+        margin-top: 3rem;
+        @include media-max($medium) {
+            margin-top: 2rem;
+        }
+    }
+    h3 + & {
+        margin-top: 2rem;
+    }
 }

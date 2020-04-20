@@ -76,6 +76,19 @@ jQuery(function($){
 		});
 	}
 
+    shop.smoothScroll = function(){
+        // Remove the # from the hash, as different browsers may or may not include it
+        var hash = location.hash.replace('#','');
+        console.log(hash);
+        if(hash != ''){
+            scrollOffset = ($(window).width() < 600) ? 420 : 100;
+            // Clear the hash in the URL
+            // location.hash = '';   // delete front "//" if you want to change the address bar
+            $('html, body').animate({ scrollTop: $('#'+hash).offset().top - scrollOffset}, 1000);
+            $('#'+hash).css('color', '#FF4E50');
+        }
+    }
+
 	/*
 	* End Functions
 	*/
@@ -94,6 +107,7 @@ jQuery(function($){
             direction: 'horizontal',
             loop: true,
             autoHeight: true,
+            parallax: true,
 
             // If we need pagination
             pagination: {
@@ -116,6 +130,7 @@ jQuery(function($){
 	*/
 	$(window).load(function() {
 		shop.headerAnimationDown();
+        shop.smoothScroll();
 	});
 
 	/*

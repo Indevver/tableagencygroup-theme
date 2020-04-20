@@ -51,11 +51,13 @@ $slides = array_map( function($a) {
 							<img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
 						</div>
 						<div class="columns small-12 large-6 large-offset-1 panelists">
-							<?php if ($slide['panelists']) : ?>
+							<?php if ($slide['panelists']) :
+								$parallax = -100;
+								?>
 								<div class="row small-up-2 medium-up-3">
 						            <?php foreach($slide['panelists'] as $panelist) : ?>
 										<div class="columns text-center">
-											<a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
+											<a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>" data-swiper-parallax="<?php echo $parallax; ?>" data-swiper-parallax-duration="500">
 					                            <img class="panelist-headshot" src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
 						                        <div class="panelist-name">
 							                        <?= $panelist['name'] ?>
@@ -65,7 +67,9 @@ $slides = array_map( function($a) {
 					                            </div>
 					                        </a>
 										</div>
-						            <?php endforeach ?>
+						            <?php
+									$parallax = $parallax - 50;
+									endforeach ?>
 								</div>
 				            <?php endif ?>
 						</div>

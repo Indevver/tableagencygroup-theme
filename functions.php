@@ -28,3 +28,14 @@ function tag_setup() {
 	add_editor_style( '/assets/css/min/editor-styles.min.css' );
 }
 add_action( 'after_setup_theme', 'tag_setup' );
+
+
+function custom_redirects() {
+
+    if ( is_front_page() ) {
+        wp_redirect( home_url( '/rise-up/' ) );
+        die;
+    }
+
+}
+add_action( 'template_redirect', 'custom_redirects' );

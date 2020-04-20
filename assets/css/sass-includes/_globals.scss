@@ -70,3 +70,11 @@ div[class*="button"]{
 .align-self-center {
     align-self: center;
 }
+
+.wp-block-cover:not(.tag-banner-wave), .wp-block-cover-image {
+    min-height: 300px;
+    .wp-block-cover__inner-container {
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+}

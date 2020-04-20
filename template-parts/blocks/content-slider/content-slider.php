@@ -31,29 +31,85 @@ $slides = array_map( function($a) {
 }, get_field('slides'))
 ?>
 
-<div id="<?= $id ?>" class="<?= $className ?>">
-	<?php foreach($slides as $slide) : ?>
-		<h3>
-			<?= $slide['session_title'] ?>
-        </h3>
-        <div class="columns">
-            <div class="col">
-                <img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
-            </div>
-            <div class="col panelists">
-                <?php if ($slide['panelists']) : ?>
-		            <?php foreach($slide['panelists'] as $panelist) : ?>
-                        <a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
-                            <img class="panelist-headshot" src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
-	                        <div class="panelist-name">
-		                        <?= $panelist['name'] ?>
-                            </div>
-                            <div class="panelist-organization">
-	                            <?= $panelist['organization'] ?>
-                            </div>
-                        </a>
-		            <?php endforeach ?>
-	            <?php endif ?></div>
-            </div>
-	<?php endforeach ?>
+<div id="<?= $id ?>" class="wp-block-coblocks-row alignwide <?= $className ?>">
+	<!-- If we need navigation buttons -->
+	<div class="swiper-container">
+	    <!-- Additional required wrapper -->
+	    <div class="swiper-wrapper">
+	        <!-- Slides -->
+			<?php foreach($slides as $slide) : ?>
+				<div class="swiper-slide">
+					<div class="row tag-title__line">
+						<div class="columns">
+							<h3>
+								<?= $slide['session_title'] ?>
+					        </h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="columns small-12 large-5 show-for-large">
+							<img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
+						</div>
+						<div class="columns small-12 large-6 large-offset-1 panelists">
+							<?php if ($slide['panelists']) : ?>
+								<div class="row small-up-2 medium-up-3">
+						            <?php foreach($slide['panelists'] as $panelist) : ?>
+										<div class="columns text-center">
+											<a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
+					                            <img class="panelist-headshot" src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
+						                        <div class="panelist-name">
+							                        <?= $panelist['name'] ?>
+					                            </div>
+					                            <div class="panelist-organization">
+						                            <?= $panelist['organization'] ?>
+					                            </div>
+					                        </a>
+										</div>
+						            <?php endforeach ?>
+								</div>
+				            <?php endif ?>
+						</div>
+					</div>
+				</div>
+			<?php endforeach ?>
+	    </div>
+	</div>
+	<div class="tag-swiper-pagination swiper-pagination"></div>
+	<div class="tag-swiper-prev swiper-button-prev"></div>
+	<div class="tag-swiper-next swiper-button-next"></div>
+	<?php /* foreach($slides as $slide) : ?>
+		<div class="swiper-slide">
+			<div class="row">
+				<div class="columns">
+					<h3>
+						<?= $slide['session_title'] ?>
+			        </h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-12 medium-6 show-for-medium">
+					<img src="<?= $slide['image']['sizes']['medium'] ?>" alt="<?= $slide['image']['alt'] ?>">
+				</div>
+				<div class="columns small-12 medium-6">
+					<?php if ($slide['panelists']) : ?>
+						<div class="row small-up-2 medium-up-3">
+				            <?php foreach($slide['panelists'] as $panelist) : ?>
+								<div class="columns">
+									<a class="panelist" href="<?= $panelist['link_to_bio']['url'] ?? '' ?>" target="<?= $panelist['link_to_bio']['target'] ?? '' ?>">
+			                            <img class="panelist-headshot" src="<?= $panelist['headshot']['sizes']['medium'] ?>" alt="<?= $panelist['headshot']['alt'] ?>">
+				                        <div class="panelist-name">
+					                        <?= $panelist['name'] ?>
+			                            </div>
+			                            <div class="panelist-organization">
+				                            <?= $panelist['organization'] ?>
+			                            </div>
+			                        </a>
+								</div>
+				            <?php endforeach ?>
+						</div>
+		            <?php endif ?>
+				</div>
+			</div>
+		</div>
+	<?php endforeach */ ?>
 </div>

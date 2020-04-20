@@ -91,3 +91,24 @@ p {
 		font-weight: 300;
 	}
 }
+
+.tag-title__line {
+	overflow: hidden;
+	h3 {
+		color: $color-tag-primary;
+		display: inline-block;
+		position: relative;
+		&::after {
+			content: '';
+			display: inline-block;
+			height: 5px;
+			background: $color-tag-primary;
+			width: 100vw;
+			position: absolute;
+			left: calc(100% + 20px);
+			top: -5px;
+			margin: auto;
+			bottom: 0;
+		}
+	}
+}

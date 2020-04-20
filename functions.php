@@ -15,7 +15,8 @@ function tag_enqueue_styles() {
     // wp_enqueue_style( 'typekit', 'https://use.typekit.net/ena6hfe.css' ); // Jeremy's
     wp_enqueue_style( 'typekit', 'https://use.typekit.net/eqz5ubu.css' ); // Brian's
 
-    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/tag-scripts.js', array( 'jquery' ), $version );
+    wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ), $version );
+    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/tag-scripts.js', array( 'jquery', 'swiper' ), $version );
 }
 
 

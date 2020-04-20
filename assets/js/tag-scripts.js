@@ -6,7 +6,7 @@ jQuery(function($){
 	*/
 	shop = {};
 
-    shop.scrollTargets = '.is-style-bottom-wave';
+    shop.scrollTargets = '.tag-banner-wave'; // comma separated like a jquery selector
 
     shop.lastScrollPos = $(window).scrollTop();
 
@@ -80,8 +80,6 @@ jQuery(function($){
 	* End Functions
 	*/
 
-
-
 	/*
 	*
 	*	Place items in here to have them run after the Dom is ready
@@ -90,6 +88,25 @@ jQuery(function($){
 	$(document).ready(function(){
         shop.headerAnimationDown();
 		shop.animateContent();
+
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoHeight: true,
+
+            // If we need pagination
+            pagination: {
+              el: '.tag-swiper-pagination',
+              clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.tag-swiper-next',
+              prevEl: '.tag-swiper-prev',
+            },
+        });
 	});
 
 	/*

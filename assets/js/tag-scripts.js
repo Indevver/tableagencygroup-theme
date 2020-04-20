@@ -121,6 +121,7 @@ jQuery(function($){
               prevEl: '.tag-swiper-prev',
             },
         });
+		$('a.social-icons__icon').attr('target', '_blank');
 	});
 
 	/*
